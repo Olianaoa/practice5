@@ -44,7 +44,6 @@ function change_password() {
     } else {
         local.error_old_password = 'Неправильный текущий пароль'
     }
-
 }
 </script>
 

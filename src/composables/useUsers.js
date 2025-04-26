@@ -52,12 +52,7 @@ function add_user(name, password) {
                 password: '1234',
                 role: 'Админ'
             },
-            {
-                id: 1,
-                name: 'Оляна',
-                password: '1234',
-                role: 'Пользователь'
-            },)
+        )
     } else {
         users.value.push({
             id: users.value[users.value.length - 1].id + 1,
@@ -100,15 +95,15 @@ function delete_user(index) {
 }
 
 function delete_user_items(name) {
-    console.log(items.value);
-
+    let array=[]
     items.value.forEach(elem => {
         console.log(elem.user_name);
-
         if (elem.user_name === name) {
-            // console.log('я  подхожу ', elem.user_name, name);
-            delete_item(elem.id)
+            array.push(elem)
         }
+    });
+    array.forEach(element => {
+        delete_item(element.id)
     });
 }
 
