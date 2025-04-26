@@ -19,10 +19,10 @@ import delete_cur_item from './components/product/change_item_params/delete_item
 import output_all_users from './components/account/output_all_users.vue'
 
 const routes = [
-    { path: '', component: create_acc, name: 'create_acc' },
-    { path: 'log_in', component: log_in, name: 'log_in' },
+    { path: '/practice5', component: create_acc, name: 'create_acc' },
+    { path: '/practice5/log_in', component: log_in, name: 'log_in' },
     {
-        path: 'account_info/:id?', component: acc_info, name: 'account_info',
+        path: '/practice5/account_info/:id?', component: acc_info, name: 'account_info',
         children: [
             {
                 path: 'change_name',
@@ -46,9 +46,9 @@ const routes = [
             },
         ]
     },
-    { path: 'catalog', component: all_items, name: 'all_items' },
+    { path: '/practice5/catalog', component: all_items, name: 'all_items' },
     {
-        path: 'item/:id?', component: item_params, name: 'item_params',
+        path: '/practice5/item/:id?', component: item_params, name: 'item_params',
         children: [
             {
                 path: 'change_description',
@@ -72,7 +72,7 @@ const routes = [
             },
         ]
     },
-    { path: 'output_all_users', component: output_all_users, name: 'output_all_users' }
+    { path: '/practice5/output_all_users', component: output_all_users, name: 'output_all_users' }
 ]
 
 export const router = createRouter({
